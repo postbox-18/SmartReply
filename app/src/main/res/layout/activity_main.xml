@@ -37,31 +37,35 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
 
     <android.support.v7.widget.RecyclerView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:id="@+id/rvSuggestions"/>
+        android:id="@+id/rvSuggestions"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/rvMessages"
+        app:layout_constraintEnd_toEndOf="@id/centerguideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/horizontalguideline"/>
 
     <android.support.v7.widget.RecyclerView
-            android:id="@+id/rvMessages"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/rvSuggestions"/>
-
+        android:id="@+id/rvMessages"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/horizontalguideline"
+        app:layout_constraintStart_toStartOf="@id/centerguideline"
+        app:layout_constraintTop_toTopOf="parent" />
+<android.support.constraint.Guideline
+    android:id="@+id/centerguideline"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_constraintGuide_begin="200dp"/>
+    <android.support.constraint.Guideline
+        android:id="@+id/horizontalguideline"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="300dp"/>
 </android.support.constraint.ConstraintLayout>
